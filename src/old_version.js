@@ -5,19 +5,18 @@ import './index.css'
 import 'font-awesome/css/font-awesome.min.css';
 
 function Header() {
-    return (
-        <div className="header"> 
-            <div className="image"> <img src="./Images/yc.jpeg" /> </div>
-            <div className="logotype" fontWeight="bold"> Hacker News  </div>
-            <div className="rest"> new | threads | comments | show | ask | jobs | submit  </div>
-        </div>
-    )
+    <div className="header"> new | threads | comments | show | ask | jobs | submit </div>
 } 
+
+function Thread () {
+    
+}
+
 
 function ThreadList ( {files} ) {
     return (
+        
         <div className="list_of_threads">
-                <Header/>
                 {files.map ( file => (
                     <div className="thread-list-item" key={file.id}> 
                         <div className="title"> 
