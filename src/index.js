@@ -15,7 +15,6 @@ function PinterestCard ( {testFile} ) {
                 <div className="images">
                     <img src={testFile.mainImg} alt="1" className="main" />
                 </div>
-                <button> 
                 {/* <div className="subtitle"> Aviation Explorer</div> */}
         </div>
     )
