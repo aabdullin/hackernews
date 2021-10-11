@@ -15,7 +15,6 @@ function PinterestCard ( {testFile} ) {
                 <div className="images">
                     <img src={testFile.mainImg} alt="1" className="main" />
                 </div>
-                {/* <div className="subtitle"> Aviation Explorer</div> */}
         </div>
     )
 }
@@ -48,14 +47,6 @@ const testCards = [
         subImg1: require('./Images/tsub1.jpeg'),
         subImg2: require('./Images/tsub2.jpeg'),
         subImg3: require('./Images/tsub3.jpeg'),
-    },
-    {
-        title: "Lebannon",
-        pins: 641,
-        mainImg: require('./Images/lmain.jpeg'),
-        subImg1: require('./Images/lsub1.jpeg'),
-        subImg2: require('./Images/lsub2.jpeg'),
-        subImg3: require('./Images/lsub3.jpeg'),
     },
     {
         title: "Israel",
