@@ -4,85 +4,99 @@ import PropTypes from 'prop-types'
 import './index.css'
 import 'font-awesome/css/font-awesome.min.css';
 
-function Header() {
+
+function PinterestCard ( {testFile} ) {
     return (
-        <div className="header"> 
-            <div className="image"> <img src="./Images/yc.jpeg" /> </div>
-            <div className="logotype" fontWeight="bold"> Hacker News  </div>
-            <div className="rest"> new | threads | comments | show | ask | jobs | submit  </div>
+        <div className="card">
+
+                <div className="title"> {testFile.title} </div>
+                <div className="subtitle">Aviation explorer</div>
+
+                <div className="images">
+                    <img src={testFile.mainImg} alt="1" className="main" />
+                </div>
+                <button> 
+                {/* <div className="subtitle"> Aviation Explorer</div> */}
         </div>
     )
-} 
+}
 
-function ThreadList ( {files} ) {
+PinterestCard.propTypes = {
+    card: PropTypes.object.isRequired
+}
+
+function PinterestCardList ( {testFiles} ) {
     return (
-        <div className="list_of_threads">
-                <Header/>
-                {files.map ( file => (
-                    <div className="thread-list-item" key={file.id}> 
-                        <div className="title"> 
-                            <div className="thread-list-id"> {file.id}. </div>
-                            <div className="thread-list-title"> {file.title} </div>
-                            <div className="thread-list-url"> ({file.url}) </div>
-                        </div>
-                        <div className="meta-data">
-                            {file.points} points by {file.author} {file.time} hours ago | flag | hide | {file.comments} | instapaper | save to pocket
-                        </div>
-                    </div>
+        <div className="list_of_cards">
+                {testFiles.map ( file => (
+                    <PinterestCard testFile={file} key={file.id} />
                 ))}
         </div>
     )
 }
                  
 
-ThreadList.propTypes = {
-    files: PropTypes.array
+PinterestCardList.propTypes = {
+    testFiles: PropTypes.array
 }
 
 
 const testCards = [ 
     {
-        id: 1,
-        title: `Why I'm Suing the US government`,
-        url: 'bunniestudios.com',
-        points: '1346',
-        author: 'ivank',
-        time: '11',
-        comments: '257'
+        title: "Turkey",
+        pins: 4850,
+        mainImg: require('./Images/tmain.jpeg'),
+        subImg1: require('./Images/tsub1.jpeg'),
+        subImg2: require('./Images/tsub2.jpeg'),
+        subImg3: require('./Images/tsub3.jpeg'),
     },
     {
-        id: 2,
-        title: `Zenzizen`,
-        url: 'wikipedia.org',
-        points: '140',
-        author: 'vinchuco',
-        time: '4',
-        comments: '40'
+        title: "Lebannon",
+        pins: 641,
+        mainImg: require('./Images/lmain.jpeg'),
+        subImg1: require('./Images/lsub1.jpeg'),
+        subImg2: require('./Images/lsub2.jpeg'),
+        subImg3: require('./Images/lsub3.jpeg'),
     },
     {
-        id: 3,
-        title: `Abc`,
-        url: 'facebook.com',
-        points: '140',
-        author: 'chu',
-        time: '2',
-        comments: '21'
+        title: "Israel",
+        pins: 209,
+        mainImg: require('./Images/imain.jpeg'),
+        subImg1: require('./Images/isub1.jpeg'),
+        subImg2: require('./Images/isub2.jpeg'),
+        subImg3: require('./Images/isub3.jpeg'),
     },
     {
-        id: 4,
-        title: `Abc`,
-        url: 'facebook.com',
-        points: '140',
-        author: 'chu',
-        time: '2',
-        comments: '21'
-    }
+        title: "Ideas Repair",
+        pins: 4850,
+        mainImg: require('./Images/imain.jpeg'),
+        subImg1: require('./Images/isub1.jpeg'),
+        subImg2: require('./Images/isub2.jpeg'),
+        subImg3: require('./Images/isub3.jpeg'),
+    },
+    {
+        title: "Navigation",
+        pins: 641,
+        mainImg: require('./Images/imain.jpeg'),
+        subImg1: require('./Images/isub1.jpeg'),
+        subImg2: require('./Images/isub2.jpeg'),
+        subImg3: require('./Images/isub3.jpeg'),
+    },
+    {
+        title: "Great Aviation",
+        pins: 209,
+        mainImg: require('./Images/imain.jpeg'),
+        subImg1: require('./Images/isub1.jpeg'),
+        subImg2: require('./Images/isub2.jpeg'),
+        subImg3: require('./Images/isub3.jpeg'),
+    },
+    
 ];
 
 
 
 ReactDOM.render( 
-    <ThreadList files={testCards}/>, 
+    <PinterestCardList testFiles={testCards}/>, 
     document.querySelector('#root')
 )
 
