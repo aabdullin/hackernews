@@ -92,6 +92,14 @@ const testCards = [
         subImg2: isub2,
         subImg3: isub3,
     },
+    {
+        title: "UAE",
+        pins: 209,
+        mainImg: imain,
+        subImg1: isub1,
+        subImg2: isub2,
+        subImg3: isub3,
+    },
     
 ];
 

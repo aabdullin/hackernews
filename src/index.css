@@ -1,7 +1,8 @@
 .list_of_cards {
-  display: flex;
-  flex-grow: 3;
   background-color: lightgrey;
+  max-width: 840px;
+  display: flex;
+  flex-direction: row;
 }
 
 .card {
