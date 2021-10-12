@@ -1,37 +1,36 @@
-.header {
-  background-color: orange;
+.list_of_cards {
   display: flex;
+  flex-grow: 3;
+  background-color: lightgrey;
 }
 
-.logotype {
-  font-weight: bold;
-}
-
-.rest {
-  margin: 0 0 0 5px;
-}
-
-.list_of_threads {
-  font-family: Helvetica, sans-serif;
-  max-width: 2000px;
-  color: #333;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-  background-color: lightyellow;
-  border-color: lightyellow;
-}
-
-.meta-data {
-  font-size: small;
-}
-
-.thread-list-item {
+.card {
   margin: 1%;
-  padding: 0%;
+  border-style: solid;
+  border-color: #92a8d1;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
-.title,
-.metadata {
+.images {
   display: flex;
+  flex-direction: column;
 }
+
+.main {
+  max-width: 260px;
+}
+
+.sub_image {
+  margin: 0.2%;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.button {
+  max-width: 260px;
+}
+
+/* flex-grow: 4; */
